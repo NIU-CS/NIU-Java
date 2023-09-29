@@ -16,14 +16,36 @@ import java.nio.charset.StandardCharsets;
 public class Shell {
     Shell() {
         File rc_file = new File(System.getProperty("user.dir") + "/.yushrc");
-//        if (rc_file.exists()) {
-//            List<String> lines = Files.readAllLines(rc_file.toPath(), StandardCharsets.UTF_8);
-//        }
+        if (rc_file.exists()) {
+            try {
+                List<String> lines = Files.readAllLines(rc_file.toPath(), StandardCharsets.UTF_8);
+                for (String line : lines) {
+                    exec_cmd(line);
+                }
+            } catch (Exception e) {
+                System.err.println(e.getMessage());
+            }
+        }
     }
 
     private static int status = 0;
 
+    private static String gen_path() {
+        String home = System.getProperty("user.home");
+        String dir = System.getProperty("user.dir");
+
+        if (dir.substring(0, home.length()).equals(home)) {
+            return "~" + dir.substring(home.length(), dir.length());
+        }
+
+        return dir;
+    }
+
     private static int exec_cmd(String line) {
+        if (line == null) {
+            return 0;
+        }
+
         String[] tokens = line.split(" ");
         if (tokens.length == 0) {
             return 0;
@@ -76,7 +98,7 @@ public class Shell {
             System.out.print(
                 System.getProperty("user.name") +
                 "@" + " " +
-                System.getProperty("user.dir") + " > "
+                gen_path() + " > "
             );
 
             String line = System.console().readLine();
