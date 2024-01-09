@@ -11,5 +11,6 @@ public class Hw5_3 {
         }
 
         System.out.println(count);
+        in.close();
     }
 }

@@ -8,5 +8,6 @@ public class Hw4_2 {
         b = in.nextInt();
         c = in.nextInt();
         System.out.println(a+b>c && a+c>b && b+c>a);
+        in.close();
     }
 }

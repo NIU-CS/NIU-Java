@@ -20,5 +20,7 @@ public class Hw4_4 {
         } else {
             System.out.println("0");
         }
+
+        in.close();
     }
 }

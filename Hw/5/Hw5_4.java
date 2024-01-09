@@ -9,5 +9,6 @@ public class Hw5_4 {
         System.out.println("百位數: " + (n%1000)/100);
         System.out.println("十位數: " + (n%100)/10);
         System.out.println("個位數: " + (n%10));
+        in.close();
     }
 }

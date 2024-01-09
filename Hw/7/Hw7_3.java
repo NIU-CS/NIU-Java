@@ -24,5 +24,7 @@ public class Hw7_3 {
         } else {
             System.out.println("不是回文數");
         }
+
+        in.close();
     }
 }

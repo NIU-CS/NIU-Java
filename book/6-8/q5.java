@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Hw6_2 {
+public class q5 {
     public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
         int month = in.nextInt();

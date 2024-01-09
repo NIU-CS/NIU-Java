@@ -7,5 +7,6 @@ public class Hw3_1 {
         int b = in.nextInt();
 
         System.out.println(a/b + " " + a%b);
+        in.close();
     }
 }

@@ -6,5 +6,6 @@ public class Hw3_3 {
         int height = in.nextInt();
         int weight = in.nextInt();
         System.out.println(weight / Math.pow(height/100.0, 2));
+        in.close();
     }
 }

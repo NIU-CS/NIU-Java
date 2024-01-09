@@ -7,5 +7,6 @@ public class Hw5_2 {
         System.out.println("100元: " + n/100);
         System.out.println("10元: " + (n%100)/10);
         System.out.println("1元: " + (n%100)%10);
+        in.close();
     }
 }

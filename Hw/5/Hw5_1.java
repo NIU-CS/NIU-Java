@@ -10,5 +10,6 @@ public class Hw5_1 {
         }
 
         System.out.println(sum);
+        in.close();
     }
 }

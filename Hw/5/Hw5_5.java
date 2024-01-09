@@ -14,5 +14,7 @@ public class Hw5_5 {
                 count++;
             }
         }
+
+        in.close();
     }
 }

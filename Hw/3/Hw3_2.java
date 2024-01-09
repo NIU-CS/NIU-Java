@@ -7,5 +7,6 @@ public class Hw3_2 {
         money = (money/10000)*1000;
 
         System.out.println(money);
+        in.close();
     }
 }
